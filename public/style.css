@@ -35,3 +35,7 @@ ul {
   text-align: left;
   padding-left: 50px;
 }
+
+.form-delete {
+  display: inline-block;
+}

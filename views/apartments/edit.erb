@@ -1,0 +1,38 @@
+<h2>Edit Apartment</h2>
+
+<form class="col s12 m6" method='post' action='/apartments/<%= @apartment.id %>'>
+  <input type="hidden" name="_method" value="put">
+  <div class="row">
+    <div class="input-field col s6">
+      <input id="apartment_address" class="validate" type='text' name='apartment[address]' value="<%= @apartment.address %>">
+      <label class="active" for="apartment_address">Apartment Address</label>
+    </div>
+    <div class="input-field col s6">
+      <input id='apartment_monthly_rent' class="validate" type='text' name='apartment[monthly_rent]' value="<%= @apartment.monthly_rent %>">
+      <label class="active" for="apartment_monthly_rent">Monthly Rent $</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s6">
+      <input class="validate" type='text' name='apartment[sqft]' value="<%= @apartment.sqft %>">
+    </div>
+    <div class="input-field col s6">
+      <input class="validate" type='text' name='apartment[num_beds]' value="<%= @apartment.num_beds %>">
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s6">
+      <input class="validate" type="text" name="apartment[num_baths]" value="<%= @apartment.num_baths %>">
+    </div>
+  </div>
+  <div class="row">
+    <button class='form_submit btn' type='submit' value='SUBMIT'>SUBMIT</button>
+  </div>
+</form>
+
+<div class="row">
+  <form action="/apartments/<%= @apartment.id %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input class="form_submit btn" type="submit" value="Delete!">
+  </form>
+</div>

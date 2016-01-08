@@ -1,31 +1,30 @@
-<div class="container">
+
   <h2>New Apartment</h2>
   <form class="col s12 m6" method='post' action='/apartments'>
     <div class="row">
       <div class="input-field col s6">
-        <input id="apartment_address" class="validate" type='text' name='apartment_address' placeholder='1600 Pennsylvania Ave, Washington, DC 20005'>
+        <input id="apartment_address" class="validate" type='text' name='apartment[address]' placeholder='1600 Pennsylvania Ave, Washington, DC 20005'>
         <label class="active" for="apartment_address">Apartment Address</label>
       </div>
       <div class="input-field col s6">
-        <input id='apartment_monthly_rent' class="validate" type='text' name='apartment_monthly_rent' placeholder='Monthly rent $'>
+        <input id='apartment_monthly_rent' class="validate" type='text' name='apartment[monthly_rent]' placeholder='Monthly rent $'>
         <label class="active" for="apartment_monthly_rent">Monthly Rent $</label>
       </div>
     </div>
     <div class="row">
       <div class="input-field col s6">
-        <input class="validate" type='text' name='apartment_sqft' placeholder="Square feet">
+        <input class="validate" type='text' name='apartment[sqft]' placeholder="Square feet">
       </div>
       <div class="input-field col s6">
-        <input class="validate" type='text' name='apartment_num_beds' placeholder='Number of Bedrooms'>
+        <input class="validate" type='text' name='apartment[num_beds]' placeholder='Number of Bedrooms'>
       </div>
     </div>
     <div class="row">
       <div class="input-field col s6">
-        <input class="validate" type="text" name="apartment_num_baths" placeholder='Number of Bathrooms'>
+        <input class="validate" type="text" name="apartment[num_baths]" placeholder='Number of Bathrooms'>
       </div>
     </div>
     <div class="row">
       <button class='form_submit btn' type='submit' value='SUBMIT'>SUBMIT</button>
     </div>
   </form>
-</div>
